@@ -1,0 +1,154 @@
+rapture-debug = false
+
+from()
+  return called-from
+
+media-proxy-360-640-3()
+  @media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3)
+    if rapture-debug
+      .rapture-media-debug
+        media: current-media()
+        test: from()
+    {block}
+
+/* Target HTC One */
+media-HTC-One()
+  +media-proxy-360-640-3()
+    {block}
+
+/* Target Samsung Galaxy S5 */
+media-S5()
+  +media-proxy-360-640-3()
+    {block}
+
+/* Target OnePlus One */
+media-onePlus-one()
+  +media-proxy-360-640-3()
+    {block}
+
+/* Target all iPad */
+media-iPad()
+  @media screen and (device-width: 768px) and (device-height: 1024px)
+    if rapture-debug
+      .rapture-media-debug
+        media: current-media()
+        test: from()
+    {block}
+
+/* Target iPad Mini */
+media-iPad-mini()
+  @media screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 1)
+    if rapture-debug
+      .rapture-media-debug
+        media: current-media()
+        test: from()
+    {block}
+
+/* Target iPad 1 and 2 */
+media-iPad-1-and-2()
+  @media screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 1)
+    if rapture-debug
+      .rapture-media-debug
+        media: current-media()
+        test: from()
+    {block}
+
+
+/* Target iPad 3 and 4 */
+media-iPad-3-and-4()
+  @media screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)
+    if rapture-debug
+      .rapture-media-debug
+        media: current-media()
+        test: from()
+    {block}
+
+media-iphone()
+  @media only screen and (min-device-width : 320px) and (max-device-width : 480px)
+    if rapture-debug
+      .rapture-media-debug
+        media: current-media()
+        test: from()
+    {block}
+
+/* Target iPhone 3G */
+media-iphone-3g()
+  @media screen and (device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)
+    if rapture-debug
+      .rapture-media-debug
+        media: current-media()
+        test: from()
+    {block}
+
+/* Target iPhone 4 */
+media-iphone-4()
+  @media screen and (device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)
+    if rapture-debug
+      .rapture-media-debug
+        media: current-media()
+        test: from()
+    {block}
+
+/* Target iPhone 5 */
+media-iphone-5()
+  @media screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)
+    if rapture-debug
+      .rapture-media-debug
+        media: current-media()
+        test: from()
+    {block}
+
+/* Target iPhone 6 */
+media-iphone-6()
+  @media screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)
+    if rapture-debug
+      .rapture-media-debug
+        media: current-media()
+        test: from()
+    {block}
+
+/* Target iPhone 6 Plus */
+media-iphone-6-plus()
+  @media screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3)
+    if rapture-debug
+      .rapture-media-debug
+        media: current-media()
+        test: from()
+    {block}
+
+
+media-portrait()
+  @media (orientation : portrait)
+    {block}
+media-landscape()
+  @media (orientation : landscape)
+    {block}
+
+
+/*test*/
++media-HTC-One()
+  body {}
++media-S5()
+  body {}
++media-onePlus-one()
+  body {}
++media-iPad()
+  body {}
++media-iPad-mini()
+  body {}
++media-iPad-1-and-2()
+  body {}
++media-iPad-3-and-4()
+  body {}
++media-iphone()
+  body {}
++media-iphone-3g()
+  body {}
++media-iphone-4()
+  body {}
++media-iphone-5()
+  body {}
++media-iphone-6()
+  body {}
++media-iphone-6-plus()
+  body {}
